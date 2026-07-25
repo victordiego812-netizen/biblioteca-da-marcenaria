@@ -36,24 +36,25 @@ t.async=!0;
 t.src=v;
 s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}
-(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '2151654785649073');
 fbq('track', 'PageView');
 fbq('track', 'ViewContent', {
+  content_name: 'Caderno de Marcenaria - Volume 1',
+  content_type: 'product',
   value: 47.90,
   currency: 'BRL'
 });
 </script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2151654785649073&ev=PageView&noscript=1"/>
-</noscript>
 <!-- End Meta Pixel Code -->
 </head>
 <body>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=2151654785649073&ev=PageView&noscript=1"
+       alt="">
+</noscript>
 <header class="header" id="header">
   <div class="container nav">
     <a class="brand" href="#inicio"><span class="brand-icon">BM</span><span><b>Biblioteca da Marcenaria</b><small>Construindo conhecimento, projeto por projeto.</small></span></a>
@@ -133,7 +134,7 @@ src="https://www.facebook.com/tr?id=2151654785649073&ev=PageView&noscript=1"/>
     <div class="offer-copy"><span class="kicker">Acesso imediato</span><h2>Leve o Volume 1 completo para sua oficina.</h2><p>Um único material com 20 projetos organizados para você consultar sempre que quiser construir, aprender ou vender.</p>
       <ul class="checklist"><li>20 projetos completos e ilustrados</li><li>Lista de materiais e cortes</li><li>Medidas e vistas explodidas</li><li>Passo a passo de montagem</li><li>Ideias de uso e resultado final</li><li>Arquivo digital em PDF</li></ul>
       <div class="price"><small>De <s>R$ 67,90</s> por apenas</small><strong>R$ 47,90</strong><span>pagamento único</span></div>
-      <a class="btn primary wide" href="#" id="checkout">Quero meu Volume 1 agora <b>→</b></a><div class="safe">🔒 Compra segura • Acesso imediato • 7 dias de garantia</div>
+      <a class="btn primary wide" href="https://pay.kiwify.com.br/4n4MIx9" id="checkout">Quero meu Volume 1 agora <b>→</b></a><div class="safe">🔒 Compra segura • Acesso imediato • 7 dias de garantia</div>
     </div>
   </div>
 </section>
@@ -149,5 +150,46 @@ src="https://www.facebook.com/tr?id=2151654785649073&ev=PageView&noscript=1"/>
 
 <div class="modal" id="modal" aria-hidden="true"><button class="close" id="close" aria-label="Fechar">×</button><div class="modal-scroll"><img id="modalImage" alt="Página ampliada do projeto"></div></div>
 <script src="script.js"></script>
+<script>
+(function () {
+  const checkoutButton = document.getElementById('checkout');
+  if (!checkoutButton) return;
+
+  const checkoutUrl = 'https://pay.kiwify.com.br/4n4MIx9';
+
+  checkoutButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'begin_checkout', {
+        currency: 'BRL',
+        value: 47.90,
+        items: [{
+          item_id: 'caderno-marcenaria-volume-1',
+          item_name: 'Caderno de Marcenaria - Volume 1',
+          price: 47.90,
+          quantity: 1
+        }]
+      });
+    }
+
+    if (typeof fbq === 'function') {
+      fbq('track', 'InitiateCheckout', {
+        content_ids: ['caderno-marcenaria-volume-1'],
+        content_name: 'Caderno de Marcenaria - Volume 1',
+        content_type: 'product',
+        value: 47.90,
+        currency: 'BRL'
+      });
+    }
+
+    window.setTimeout(function () {
+      window.location.href = checkoutUrl;
+    }, 350);
+  }, true);
+})();
+</script>
+
 </body>
 </html>
