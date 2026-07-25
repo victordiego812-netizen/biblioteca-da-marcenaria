@@ -1,30 +1,14 @@
-# Biblioteca da Marcenaria — Landing Page V1
+# Biblioteca da Marcenaria V2
 
-Primeira versão funcional da landing page.
+Landing page completa e responsiva.
 
-## Publicar na Vercel
+## Atualizar no GitHub pelo celular
 
-1. Extraia o arquivo ZIP.
-2. Entre na Vercel.
-3. Crie um novo projeto.
-4. Importe esta pasta pelo GitHub ou use a opção disponível de upload.
-5. Não é necessário configurar framework ou comando de build.
-6. Publique.
-
-## Arquivos
-
-- `index.html`: estrutura da página
-- `style.css`: visual e responsividade
-- `script.js`: menu, navbar e botão temporário de checkout
-
-## Próxima versão
-
-- Galeria dos 20 projetos
-- Prévia de páginas internas
-- Oferta completa
-- FAQ
-- Integração com checkout
+1. Abra o repositório.
+2. Exclua os arquivos antigos ou substitua `index.html`, `style.css` e `script.js`.
+3. Envie também a pasta `assets/images` com todas as imagens.
+4. Faça o commit. A Vercel publicará automaticamente.
 
 ## Checkout
 
-No momento, o botão exibe um aviso de teste. Depois que a plataforma de pagamento for escolhida, o link será inserido no botão.
+No arquivo `index.html`, procure pelo elemento com `id="checkout"`. Troque o `href="#"` pelo link real e remova o aviso de teste no final do `script.js`.

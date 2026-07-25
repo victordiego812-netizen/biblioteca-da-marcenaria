@@ -1,268 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Biblioteca da Marcenaria | Caderno de Marcenaria Volume 1</title>
-  <meta
-    name="description"
-    content="20 projetos completos de marcenaria com medidas, lista de materiais, vistas explodidas e passo a passo ilustrado."
-  />
-  <meta name="theme-color" content="#23463d" />
-
-  <meta property="og:title" content="Biblioteca da Marcenaria" />
-  <meta
-    property="og:description"
-    content="Construindo conhecimento, projeto por projeto."
-  />
-  <meta property="og:type" content="website" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblioteca da Marcenaria | 20 Projetos Passo a Passo</title>
+  <meta name="description" content="20 projetos completos de marcenaria com medidas, listas de materiais, vistas explodidas e passo a passo ilustrado.">
+  <meta name="theme-color" content="#16392f">
+  <meta property="og:title" content="Biblioteca da Marcenaria">
+  <meta property="og:description" content="20 projetos completos para fazer, usar e decorar.">
+  <meta property="og:image" content="assets/images/hero-mockup.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header class="site-header" id="siteHeader">
-    <div class="container nav">
-      <a href="#inicio" class="brand" aria-label="Biblioteca da Marcenaria">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" role="img">
-            <path d="M7 10.5c7.4 0 12.7 2.1 17 6.2v22c-4.3-4.1-9.6-6.2-17-6.2v-22Z"/>
-            <path d="M41 10.5c-7.4 0-12.7 2.1-17 6.2v22c4.3-4.1 9.6-6.2 17-6.2v-22Z"/>
-            <path d="M24 16.7v22"/>
-          </svg>
-        </span>
+<header class="header" id="header">
+  <div class="container nav">
+    <a class="brand" href="#inicio"><span class="brand-icon">BM</span><span><b>Biblioteca da Marcenaria</b><small>Construindo conhecimento, projeto por projeto.</small></span></a>
+    <nav class="nav-links"><a href="#por-dentro">Veja por dentro</a><a href="#projetos">Projetos</a><a href="#oferta">Oferta</a><a class="nav-buy" href="#oferta">Quero acessar</a></nav>
+    <button class="menu" id="menu" aria-label="Abrir menu"><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav" id="mobileNav"><a href="#por-dentro">Veja por dentro</a><a href="#projetos">Projetos</a><a href="#oferta">Oferta</a><a href="#oferta">Quero acessar</a></div>
+</header>
 
-        <span class="brand-copy">
-          <strong>Biblioteca da Marcenaria</strong>
-          <small>Construindo conhecimento, projeto por projeto.</small>
-        </span>
-      </a>
-
-      <nav class="desktop-nav" aria-label="Navegação principal">
-        <a href="#livro">O livro</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#faq">FAQ</a>
-        <a href="#oferta" class="nav-cta">Comprar agora</a>
-      </nav>
-
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
-      </button>
+<main>
+<section class="hero" id="inicio">
+  <div class="grain"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <div class="pill">20 projetos completos • Volume 1 expandido</div>
+      <h1>Construa móveis incríveis <span>sem adivinhar medidas</span> nem desperdiçar material.</h1>
+      <p>Tenha em mãos um caderno técnico com fotos, medidas precisas, listas de corte, vistas explodidas e passo a passo ilustrado para transformar madeira em projetos de verdade.</p>
+      <div class="hero-bullets">
+        <span>✓ Do iniciante ao avançado</span><span>✓ Acesso imediato em PDF</span><span>✓ Garantia de 7 dias</span>
+      </div>
+      <div class="hero-actions"><a class="btn primary" href="#oferta">Quero acessar o Volume 1 <b>→</b></a><a class="btn ghost" href="#por-dentro">Ver páginas reais</a></div>
+      <div class="microproof"><strong>20</strong><span>projetos detalhados</span><i></i><strong>100%</strong><span>visual e ilustrado</span></div>
     </div>
+    <div class="hero-media reveal delay"><div class="image-frame"><img src="assets/images/hero-mockup.webp" alt="Mockup do livro Biblioteca da Marcenaria"></div><div class="float-card"><b>Material técnico</b><span>Medidas, cortes e montagem</span></div></div>
+  </div>
+</section>
 
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#livro">O livro</a>
-      <a href="#beneficios">Benefícios</a>
-      <a href="#faq">FAQ</a>
-      <a href="#oferta" class="nav-cta">Comprar agora</a>
+<section class="value-strip">
+  <div class="container value-grid">
+    <article><b>20</b><span>Projetos completos</span></article><article><b>📐</b><span>Medidas precisas</span></article><article><b>🧩</b><span>Vistas explodidas</span></article><article><b>📖</b><span>Passo a passo ilustrado</span></article><article><b>💰</b><span>Potencial de venda</span></article>
+  </div>
+</section>
+
+<section class="section intro">
+  <div class="container narrow center">
+    <span class="kicker">Marcenaria sem neblina</span>
+    <h2>Você não precisa começar no escuro.</h2>
+    <p>Cada projeto foi organizado para responder às dúvidas antes que elas apareçam: o que comprar, quanto cortar, como montar e qual resultado esperar.</p>
+  </div>
+  <div class="container feature-cards">
+    <article><span>01</span><h3>Lista de materiais</h3><p>Saiba exatamente o que precisa antes de começar.</p></article>
+    <article><span>02</span><h3>Medidas principais</h3><p>Evite improvisos que custam madeira, dinheiro e tempo.</p></article>
+    <article><span>03</span><h3>Montagem visual</h3><p>Entenda a ordem das peças com vistas explodidas.</p></article>
+    <article><span>04</span><h3>Resultado final</h3><p>Veja o móvel pronto e ideias reais de utilização.</p></article>
+  </div>
+</section>
+
+<section class="section dark" id="por-dentro">
+  <div class="container section-head light"><div><span class="kicker">Prova, não promessa</span><h2>Veja por dentro antes de comprar.</h2></div><p>Estas são páginas reais do material. Toque em qualquer uma para ampliar.</p></div>
+  <div class="gallery-track" id="galleryTrack">
+    <button class="page-shot" data-image="assets/images/aparador.webp"><img loading="lazy" src="assets/images/aparador.webp" alt="Projeto Aparador com Portas de Correr"><span>Aparador com portas</span></button>
+    <button class="page-shot" data-image="assets/images/estante-escada.webp"><img loading="lazy" src="assets/images/estante-escada.webp" alt="Projeto Estante Escada"><span>Estante escada</span></button>
+    <button class="page-shot" data-image="assets/images/prateleira.webp"><img loading="lazy" src="assets/images/prateleira.webp" alt="Projeto Prateleira Flutuante"><span>Prateleira flutuante</span></button>
+    <button class="page-shot" data-image="assets/images/espelho.webp"><img loading="lazy" src="assets/images/espelho.webp" alt="Projeto Espelho Redondo"><span>Espelho com suporte</span></button>
+    <button class="page-shot" data-image="assets/images/estante-torre.webp"><img loading="lazy" src="assets/images/estante-torre.webp" alt="Projeto Estante Torre"><span>Estante torre</span></button>
+    <button class="page-shot" data-image="assets/images/mesa-lateral.webp"><img loading="lazy" src="assets/images/mesa-lateral.webp" alt="Projeto Mesa Lateral"><span>Mesa lateral</span></button>
+  </div>
+  <div class="container swipe-hint">Arraste para o lado para explorar →</div>
+</section>
+
+<section class="section" id="projetos">
+  <div class="container section-head"><div><span class="kicker">Alguns dos projetos</span><h2>Da primeira peça ao móvel que chama atenção.</h2></div><p>Projetos úteis, vendáveis e pensados para diferentes níveis de habilidade.</p></div>
+  <div class="container project-grid">
+    <article class="project-card"><div class="project-img"><img loading="lazy" src="assets/images/aparador.webp" alt="Aparador"><span>Intermediário</span></div><div><h3>Aparador com portas de correr</h3><ul><li>8 a 10 horas</li><li>Lucro estimado até R$ 600</li><li>Medidas completas</li></ul><button data-image="assets/images/aparador.webp">Ver projeto completo →</button></div></article>
+    <article class="project-card"><div class="project-img"><img loading="lazy" src="assets/images/mesa-lateral.webp" alt="Mesa lateral"><span>Intermediário</span></div><div><h3>Mesa lateral com nicho</h3><ul><li>3 a 5 horas</li><li>Lucro estimado até R$ 200</li><li>Montagem passo a passo</li></ul><button data-image="assets/images/mesa-lateral.webp">Ver projeto completo →</button></div></article>
+    <article class="project-card"><div class="project-img"><img loading="lazy" src="assets/images/estante-escada.webp" alt="Estante escada"><span>Intermediário</span></div><div><h3>Estante escada decorativa</h3><ul><li>4 a 6 horas</li><li>Lucro estimado até R$ 180</li><li>Design leve e moderno</li></ul><button data-image="assets/images/estante-escada.webp">Ver projeto completo →</button></div></article>
+  </div>
+</section>
+
+<section class="section audience">
+  <div class="container audience-grid"><div><span class="kicker">Feito para colocar em prática</span><h2>Este material é para você que...</h2></div><div class="audience-list"><article><b>01</b><span>Está começando e quer orientação clara.</span></article><article><b>02</b><span>Quer fabricar móveis para a própria casa.</span></article><article><b>03</b><span>Busca projetos para vender e gerar renda.</span></article><article><b>04</b><span>Gosta de DIY, madeira e decoração.</span></article></div></div>
+</section>
+
+<section class="section offer" id="oferta">
+  <div class="container offer-grid">
+    <div class="offer-image"><img loading="lazy" src="assets/images/offer-mockup.webp" alt="Conteúdo do Caderno de Marcenaria"></div>
+    <div class="offer-copy"><span class="kicker">Acesso imediato</span><h2>Leve o Volume 1 completo para sua oficina.</h2><p>Um único material com 20 projetos organizados para você consultar sempre que quiser construir, aprender ou vender.</p>
+      <ul class="checklist"><li>20 projetos completos e ilustrados</li><li>Lista de materiais e cortes</li><li>Medidas e vistas explodidas</li><li>Passo a passo de montagem</li><li>Ideias de uso e resultado final</li><li>Arquivo digital em PDF</li></ul>
+      <div class="price"><small>De <s>R$ 67,90</s> por apenas</small><strong>R$ 47,90</strong><span>pagamento único</span></div>
+      <a class="btn primary wide" href="#" id="checkout">Quero meu Volume 1 agora <b>→</b></a><div class="safe">🔒 Compra segura • Acesso imediato • 7 dias de garantia</div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="hero-glow hero-glow-one"></div>
-      <div class="hero-glow hero-glow-two"></div>
+<section class="section guarantee"><div class="container guarantee-card"><div class="seal">7<br><small>DIAS</small></div><div><span class="kicker">Risco zero</span><h2>Explore o material por 7 dias.</h2><p>Se perceber que o conteúdo não é para você, solicite o reembolso dentro do prazo da garantia.</p></div></div></section>
 
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <div class="eyebrow">
-            <span></span>
-            Volume 1 • Projetos Essenciais
-          </div>
+<section class="section faq"><div class="container narrow"><div class="center"><span class="kicker">Perguntas frequentes</span><h2>Tire suas últimas dúvidas.</h2></div>
+  <div class="accordion"><details><summary>O material é físico ou digital?</summary><p>É um arquivo digital em PDF. Após a confirmação do pagamento, o acesso é enviado conforme a configuração da plataforma de checkout.</p></details><details><summary>Serve para quem nunca trabalhou com marcenaria?</summary><p>Sim. Os projetos apresentam dificuldade, ferramentas, materiais, medidas e sequência de montagem de forma visual.</p></details><details><summary>Posso imprimir o caderno?</summary><p>Sim. Você poderá consultar no celular, tablet ou computador e também imprimir para uso pessoal.</p></details><details><summary>Quais ferramentas preciso ter?</summary><p>Cada projeto informa as ferramentas necessárias. A seleção inclui projetos simples e outros mais avançados.</p></details><details><summary>Como funciona a garantia?</summary><p>Você terá 7 dias para avaliar o material e solicitar o reembolso pela plataforma de pagamento, conforme as regras aplicáveis.</p></details></div>
+</div></section>
+</main>
 
-          <h1>
-            Construa móveis incríveis com projetos
-            <em>claros e prontos para executar.</em>
-          </h1>
+<footer><div class="container footer-grid"><div class="brand footer-brand"><span class="brand-icon">BM</span><span><b>Biblioteca da Marcenaria</b><small>Construindo conhecimento, projeto por projeto.</small></span></div><p>© 2026 Biblioteca da Marcenaria. Todos os direitos reservados.</p></div></footer>
 
-          <p class="hero-text">
-            O <strong>Caderno de Marcenaria Volume 1</strong> reúne
-            <strong>20 projetos completos</strong>, com medidas, lista de
-            materiais, vistas explodidas e passo a passo ilustrado para você
-            construir com mais confiança.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#oferta" class="button button-primary">
-              Quero meu Volume 1
-              <span aria-hidden="true">→</span>
-            </a>
-
-            <a href="#livro" class="button button-secondary">
-              Ver uma prévia
-            </a>
-          </div>
-
-          <ul class="trust-list" aria-label="Benefícios rápidos">
-            <li>
-              <span class="check">✓</span>
-              Acesso imediato
-            </li>
-            <li>
-              <span class="check">✓</span>
-              Download em PDF
-            </li>
-            <li>
-              <span class="check">✓</span>
-              Garantia de 7 dias
-            </li>
-          </ul>
-        </div>
-
-        <div class="hero-visual reveal reveal-delay" aria-label="Mockup do ebook">
-          <div class="visual-stage">
-            <div class="wood-line wood-line-one"></div>
-            <div class="wood-line wood-line-two"></div>
-
-            <div class="page-card page-card-left">
-              <span class="mini-label">PROJETO 1.08</span>
-              <div class="mini-title">Mesa lateral</div>
-              <div class="mini-illustration">
-                <div class="table-top"></div>
-                <div class="table-leg leg-left"></div>
-                <div class="table-leg leg-right"></div>
-              </div>
-              <div class="mini-lines">
-                <span></span><span></span><span></span>
-              </div>
-            </div>
-
-            <div class="book">
-              <div class="book-spine"></div>
-              <div class="book-cover">
-                <div class="cover-top">
-                  <span>BIBLIOTECA DA MARCENARIA</span>
-                </div>
-
-                <div class="cover-center">
-                  <div class="cover-rule"></div>
-                  <p>CADERNO DE</p>
-                  <h2>MARCENARIA</h2>
-                  <small>VOLUME 1 EXPANDIDO</small>
-                </div>
-
-                <div class="cover-drawing">
-                  <svg viewBox="0 0 260 180" aria-hidden="true">
-                    <path d="M36 112 130 62l94 50-94 50-94-50Z"/>
-                    <path d="M36 112v18l94 50 94-50v-18"/>
-                    <path d="M75 94v47M185 94v47M130 62v100"/>
-                    <path d="M88 88 130 66l42 22-42 22-42-22Z"/>
-                  </svg>
-                </div>
-
-                <div class="cover-footer">
-                  <strong>20 PROJETOS COMPLETOS</strong>
-                  <span>Medidas • Materiais • Montagem</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="page-card page-card-right">
-              <span class="mini-label">VISTA EXPLODIDA</span>
-              <div class="mini-title">Montagem clara</div>
-              <div class="exploded-view">
-                <span class="piece piece-a"></span>
-                <span class="piece piece-b"></span>
-                <span class="piece piece-c"></span>
-                <span class="piece piece-d"></span>
-                <i></i><i></i><i></i>
-              </div>
-              <div class="mini-lines">
-                <span></span><span></span>
-              </div>
-            </div>
-
-            <div class="pencil" aria-hidden="true"></div>
-            <div class="square-tool" aria-hidden="true"></div>
-          </div>
-
-          <div class="floating-badge">
-            <strong>20</strong>
-            <span>projetos<br />completos</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="container feature-strip" id="beneficios">
-        <article>
-          <span class="feature-number">01</span>
-          <div>
-            <h3>Projetos completos</h3>
-            <p>Informações organizadas do início ao acabamento.</p>
-          </div>
-        </article>
-
-        <article>
-          <span class="feature-number">02</span>
-          <div>
-            <h3>Medidas detalhadas</h3>
-            <p>Mais clareza para cortar, montar e evitar desperdícios.</p>
-          </div>
-        </article>
-
-        <article>
-          <span class="feature-number">03</span>
-          <div>
-            <h3>Passo a passo ilustrado</h3>
-            <p>Visualize cada etapa antes de colocar a mão na madeira.</p>
-          </div>
-        </article>
-
-        <article>
-          <span class="feature-number">04</span>
-          <div>
-            <h3>Feito para evoluir</h3>
-            <p>Ideal para iniciantes, entusiastas e hobbyistas.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="placeholder-section" id="livro">
-      <div class="container placeholder-content">
-        <span>PRÓXIMA SEÇÃO</span>
-        <h2>Conheça os 20 projetos do Volume 1.</h2>
-        <p>
-          Esta área já está preparada para receber a galeria completa dos
-          projetos na próxima versão.
-        </p>
-      </div>
-    </section>
-
-    <section class="placeholder-section alt" id="oferta">
-      <div class="container placeholder-content">
-        <span>OFERTA</span>
-        <h2>Volume 1 • Projetos Essenciais</h2>
-        <p>A seção de compra será conectada ao checkout escolhido.</p>
-        <a href="#" class="button button-primary" id="checkoutButton">
-          Comprar por R$ 47,90
-          <span aria-hidden="true">→</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="placeholder-section" id="faq">
-      <div class="container placeholder-content">
-        <span>FAQ</span>
-        <h2>Perguntas frequentes serão adicionadas aqui.</h2>
-      </div>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
+<div class="modal" id="modal" aria-hidden="true"><button class="close" id="close" aria-label="Fechar">×</button><div class="modal-scroll"><img id="modalImage" alt="Página ampliada do projeto"></div></div>
+<script src="script.js"></script>
 </body>
 </html>
