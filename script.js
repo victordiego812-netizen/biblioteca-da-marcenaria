@@ -1,1 +1,15 @@
-const header=document.getElementById('header');const menu=document.getElementById('menu');const mobileNav=document.getElementById('mobileNav');const modal=document.getElementById('modal');const modalImage=document.getElementById('modalImage');const close=document.getElementById('close');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>15),{passive:true});menu.addEventListener('click',()=>mobileNav.classList.toggle('open'));mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));document.querySelectorAll('[data-image]').forEach(el=>el.addEventListener('click',()=>{modalImage.src=el.dataset.image;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}));function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}close.addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});document.getElementById('checkout').addEventListener('click',e=>{e.preventDefault();gtag('event','begin_checkout');fbq('track','InitiateCheckout');window.location.href='https://pay.kiwify.com.br/4n4MIx9';});
+// Cole aqui o link real do checkout antes de publicar.
+const CHECKOUT_URL = "https://pay.kiwify.com.br/4n4MIx9";
+
+document.querySelectorAll('.js-checkout').forEach((button) => {
+  button.addEventListener('click', (event) => {
+    if (CHECKOUT_URL.includes('SEU-CHECKOUT-AQUI')) {
+      event.preventDefault();
+      alert('Configure o link do checkout no arquivo script.js antes de publicar.');
+      return;
+    }
+    button.href = CHECKOUT_URL;
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
