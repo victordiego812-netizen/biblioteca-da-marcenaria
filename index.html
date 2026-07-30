@@ -9,8 +9,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRV5QHQP8W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TRV5QHQP8W');
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+    s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '2151654785649073');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {
+      content_ids: ['biblioteca-marcenaria-v1-v2'],
+      content_name: 'Biblioteca da Marcenaria | Volumes 1 e 2',
+      content_type: 'product',
+      value: 47.90,
+      currency: 'BRL'
+    });
+  </script>
 </head>
 <body>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=2151654785649073&ev=PageView&noscript=1"
+         alt="" />
+  </noscript>
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#inicio" aria-label="Biblioteca da Marcenaria">
@@ -33,7 +67,7 @@
             <span>120+ páginas</span>
             <span>Acesso imediato</span>
           </div>
-          <a class="button button-primary js-checkout" href="#oferta">Quero minha Biblioteca</a>
+          <a class="button button-primary js-checkout" href="https://pay.kiwify.com.br/4n4MIx9">Quero minha Biblioteca</a>
           <p class="microcopy">Compra segura • material digital • acesso após a confirmação</p>
         </div>
         <div class="hero-art">
@@ -142,7 +176,7 @@
           <div class="old-price">De R$ 95,80</div>
           <div class="price"><small>por</small> R$ 47,90</div>
           <div class="installment">ou conforme condições do checkout</div>
-          <a class="button button-primary button-full js-checkout" href="#">Quero os Volumes 1 e 2</a>
+          <a class="button button-primary button-full js-checkout" href="https://pay.kiwify.com.br/4n4MIx9">Quero os Volumes 1 e 2</a>
           <div class="secure">🔒 Pagamento seguro e acesso digital</div>
         </div>
       </div>
@@ -171,7 +205,7 @@
       <div class="container center">
         <span class="eyebrow">Ideias se transformam em planos. Planos se transformam em ação.</span>
         <h2>Você cria. A madeira ganha vida.</h2>
-        <a class="button button-primary js-checkout" href="#">Quero começar agora</a>
+        <a class="button button-primary js-checkout" href="https://pay.kiwify.com.br/4n4MIx9">Quero começar agora</a>
       </div>
     </section>
   </main>
@@ -184,5 +218,115 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      const CHECKOUT_URL = 'https://pay.kiwify.com.br/4n4MIx9';
+      const PRODUCT_ID = 'biblioteca-marcenaria-v1-v2';
+      const PRODUCT_NAME = 'Biblioteca da Marcenaria | Volumes 1 e 2';
+      const PRODUCT_VALUE = 47.90;
+      const TRACKING_PARAMS = [
+        'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
+        'fbclid', 'gclid'
+      ];
+
+      function readTrackingParams() {
+        const current = new URLSearchParams(window.location.search);
+        const saved = JSON.parse(sessionStorage.getItem('bm_tracking_params') || '{}');
+
+        TRACKING_PARAMS.forEach(function (key) {
+          const value = current.get(key);
+          if (value) saved[key] = value;
+        });
+
+        sessionStorage.setItem('bm_tracking_params', JSON.stringify(saved));
+        return saved;
+      }
+
+      function buildCheckoutUrl() {
+        const url = new URL(CHECKOUT_URL);
+        const params = readTrackingParams();
+        Object.keys(params).forEach(function (key) {
+          if (params[key]) url.searchParams.set(key, params[key]);
+        });
+        return url.toString();
+      }
+
+      function trackCheckout() {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'begin_checkout', {
+            currency: 'BRL',
+            value: PRODUCT_VALUE,
+            items: [{
+              item_id: PRODUCT_ID,
+              item_name: PRODUCT_NAME,
+              price: PRODUCT_VALUE,
+              quantity: 1
+            }]
+          });
+        }
+
+        if (typeof window.fbq === 'function') {
+          window.fbq('track', 'InitiateCheckout', {
+            content_ids: [PRODUCT_ID],
+            content_name: PRODUCT_NAME,
+            content_type: 'product',
+            value: PRODUCT_VALUE,
+            currency: 'BRL'
+          });
+        }
+      }
+
+      readTrackingParams();
+
+      document.querySelectorAll('.js-checkout').forEach(function (button) {
+        button.href = buildCheckoutUrl();
+        button.addEventListener('click', function (event) {
+          event.preventDefault();
+          const destination = buildCheckoutUrl();
+          trackCheckout();
+          window.setTimeout(function () {
+            window.location.href = destination;
+          }, 350);
+        });
+      });
+
+      const reached = new Set();
+      function trackScrollDepth() {
+        const documentHeight = Math.max(
+          document.body.scrollHeight,
+          document.documentElement.scrollHeight
+        ) - window.innerHeight;
+        if (documentHeight <= 0) return;
+
+        const percentage = Math.round((window.scrollY / documentHeight) * 100);
+        [25, 50, 75, 100].forEach(function (mark) {
+          if (percentage >= mark && !reached.has(mark)) {
+            reached.add(mark);
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'scroll_depth', { percent_scrolled: mark });
+            }
+            if (typeof window.fbq === 'function') {
+              window.fbq('trackCustom', 'ScrollDepth', { percent_scrolled: mark });
+            }
+          }
+        });
+      }
+
+      window.addEventListener('scroll', trackScrollDepth, { passive: true });
+
+      [30, 60, 120].forEach(function (seconds) {
+        window.setTimeout(function () {
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'engaged_time', { seconds_on_page: seconds });
+          }
+          if (typeof window.fbq === 'function') {
+            window.fbq('trackCustom', 'TimeOnPage', { seconds_on_page: seconds });
+          }
+        }, seconds * 1000);
+      });
+    })();
+  </script>
 </body>
 </html>
