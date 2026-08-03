@@ -1,0 +1,4 @@
+# Faz o GitHub Linguist tratar os arquivos auxiliares como suporte.
+# Assim, a linguagem principal exibida no repositório será HTML.
+styles.css linguist-vendored
+script.js linguist-vendored

@@ -1,34 +1,22 @@
-# Biblioteca da Marcenaria V4 Definitiva
+# Biblioteca da Marcenaria — V4 corrigida
 
-Landing page estática, mobile-first e pronta para publicação na Vercel.
+Envie **todos os arquivos desta pasta juntos para a raiz do repositório**.
 
-## Integrações configuradas
+Arquivos obrigatórios:
+- index.html
+- styles.css
+- script.js
+- capa-biblioteca.webp
+- projeto-estante.webp
+- oferta-24-90.webp
 
-- Checkout Kiwify: `https://pay.kiwify.com.br/H9Mhu8I`
-- Meta Pixel: `2151654785649073`
-- Google Analytics 4: `G-EBJL1W7YYT`
-- Valor rastreado: `R$ 24,90`
+Integrações:
+- GA4: G-EBJL1W7YYT
+- Meta Pixel: 2151654785649073
+- Checkout Kiwify: https://pay.kiwify.com.br/H9Mhu8I
+- Produto: R$ 24,90
 
-## Eventos configurados
+As imagens foram colocadas na raiz para evitar falhas causadas pela ausência da pasta `assets` durante o upload.
 
-### GA4
-- `page_view`
-- `view_item`
-- `view_offer`
-- `scroll_50`
-- `scroll_90`
-- `begin_checkout`
-
-### Meta Pixel
-- `PageView`
-- `ViewContent`
-- `ViewOffer`
-- `Scroll50`
-- `Scroll90`
-- `InitiateCheckout`
-
-As UTMs, `fbclid` e `gclid` são preservados ao enviar o visitante para o checkout. O evento `Purchase` deve ser configurado na Kiwify ou na página de confirmação, não na landing.
-
-## Publicação na Vercel
-
-Envie o conteúdo desta pasta para a raiz do repositório no GitHub. Na Vercel, use Framework Preset **Other**, sem Build Command e sem Output Directory.
+## Linguagem exibida no GitHub
+O arquivo `.gitattributes` informa ao GitHub que CSS e JavaScript são arquivos auxiliares. Após o commit, o repositório deve aparecer como **HTML**.
