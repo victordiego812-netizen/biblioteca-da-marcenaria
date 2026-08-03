@@ -1,37 +1,34 @@
-# Landing Page - Biblioteca da Marcenaria
+# Biblioteca da Marcenaria V4 Definitiva
 
-Landing page estática pronta para GitHub + Vercel.
+Landing page estática, mobile-first e pronta para publicação na Vercel.
 
-## Publicação
+## Integrações configuradas
 
-1. Crie um repositório no GitHub.
-2. Envie todos os arquivos desta pasta para a raiz do repositório.
-3. Na Vercel, clique em **Add New > Project**.
-4. Importe o repositório.
-5. Framework Preset: **Other**.
-6. Não é necessário comando de build.
-7. Clique em **Deploy**.
+- Checkout Kiwify: `https://pay.kiwify.com.br/H9Mhu8I`
+- Meta Pixel: `2151654785649073`
+- Google Analytics 4: `G-EBJL1W7YYT`
+- Valor rastreado: `R$ 24,90`
 
-## Antes de publicar
+## Eventos configurados
 
-Abra `script.js` e substitua:
+### GA4
+- `page_view`
+- `view_item`
+- `view_offer`
+- `scroll_50`
+- `scroll_90`
+- `begin_checkout`
 
-```js
-const CHECKOUT_URL = "https://pay.kiwify.com.br/4n4MIx9";
-```
+### Meta Pixel
+- `PageView`
+- `ViewContent`
+- `ViewOffer`
+- `Scroll50`
+- `Scroll90`
+- `InitiateCheckout`
 
-pelo link real do checkout.
+As UTMs, `fbclid` e `gclid` são preservados ao enviar o visitante para o checkout. O evento `Purchase` deve ser configurado na Kiwify ou na página de confirmação, não na landing.
 
-## Preço
+## Publicação na Vercel
 
-A oferta está configurada visualmente como:
-
-- De R$ 95,80
-- Por R$ 47,90
-
-Edite o bloco `price-card` no `index.html` caso o preço final seja diferente.
-
-## Pixel Meta
-
-Insira o código base do Pixel antes do fechamento de `</head>` no `index.html`.
-O clique de checkout pode ser rastreado adicionando um evento no `script.js`.
+Envie o conteúdo desta pasta para a raiz do repositório no GitHub. Na Vercel, use Framework Preset **Other**, sem Build Command e sem Output Directory.
