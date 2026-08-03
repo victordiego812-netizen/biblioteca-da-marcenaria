@@ -17,6 +17,3 @@ Integrações:
 - Produto: R$ 24,90
 
 As imagens foram colocadas na raiz para evitar falhas causadas pela ausência da pasta `assets` durante o upload.
-
-## Linguagem exibida no GitHub
-O arquivo `.gitattributes` informa ao GitHub que CSS e JavaScript são arquivos auxiliares. Após o commit, o repositório deve aparecer como **HTML**.
