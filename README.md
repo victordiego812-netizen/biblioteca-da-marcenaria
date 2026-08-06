@@ -17,3 +17,12 @@ Integrações:
 - Produto: R$ 24,90
 
 As imagens foram colocadas na raiz para evitar falhas causadas pela ausência da pasta `assets` durante o upload.
+
+
+## Alterações V4.1 agressiva
+- Headline orientada à dor: desperdício, tempo e improviso.
+- Oferta e preço exibidos já na primeira dobra.
+- Referência de valor crível: R$ 47,90 por R$ 24,90.
+- CTAs mais diretos para os dois volumes.
+- Identificação de produto corrigida para Volumes 1 e 2 no GA4 e Meta Pixel.
+- Sem contadores, escassez falsa ou depoimentos inventados.

@@ -326,3 +326,28 @@ p { margin: 0; color: var(--ink-soft); }
   .offer-promo-wrap { margin-bottom: 48px; }
   .offer-promo-image { border-radius: 18px; }
 }
+
+
+/* V4.1: oferta mais direta, sem urgência falsa */
+.hero-offer {
+  display: grid;
+  gap: 6px;
+  width: fit-content;
+  margin: 26px 0 4px;
+  padding: 18px 22px;
+  border: 1px solid rgba(66, 79, 66, .16);
+  border-radius: 18px;
+  background: rgba(255,255,255,.7);
+  box-shadow: 0 12px 34px rgba(31,39,31,.07);
+}
+.hero-old-price { color: var(--ink-soft); font-size: .9rem; }
+.hero-price { display: flex; align-items: baseline; gap: 10px; }
+.hero-price small { color: var(--ink-soft); font-weight: 700; }
+.hero-price strong { font-family: "Libre Franklin", sans-serif; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1; letter-spacing: -.05em; color: var(--forest); }
+.hero-payment { color: var(--ink-soft); font-size: .82rem; }
+.price-reference { margin-top: 10px; color: rgba(255,255,255,.72); font-size: .95rem; }
+.price-card .btn { text-transform: uppercase; letter-spacing: .02em; }
+@media (max-width: 680px) {
+  .hero-offer { width: 100%; padding: 16px 18px; }
+  .hero-actions .btn { width: 100%; }
+}

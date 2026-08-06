@@ -2,8 +2,8 @@
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/H9Mhu8I';
 const PRODUCT = {
-  id: 'biblioteca-marcenaria-volume-1',
-  name: 'Biblioteca da Marcenaria - Volume 1',
+  id: 'biblioteca-marcenaria-volumes-1-e-2',
+  name: 'Biblioteca da Marcenaria - Volumes 1 e 2',
   value: 24.90,
   currency: 'BRL'
 };
